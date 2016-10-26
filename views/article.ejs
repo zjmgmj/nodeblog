@@ -1,0 +1,35 @@
+<%- include header %>
+<link rel="stylesheet" type="text/css" href="/css/article.css" />
+<section class="main">
+	<div class="main-header-title">
+		<h1 class="row">
+      <a class="tag" href="/tags/<%= post.tags[0] %>"><%= post.tags[0] %></a>
+</h1></div>
+	<div class="content row margin-top-100">
+		<div class="info detail">
+			<h1><%= post.title %></h1>
+			<ul>
+				<li>作者：
+					<a href="/u/<%= post.name %>">
+						<a href="/tags/<%= post.tags[1] %>"><%= post.name %></a>
+					</a><span>|</span> 日期：
+					<%= post.time.day %>
+					<span>|</span>浏览量：
+					<%= post.pv %>
+				</li>
+				<li>
+					<% if (user && (user.name == post.name)) { %>
+					<a class="edit" href="/edit/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">编辑</a>
+					<a class="delete" href="/remove/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">删除</a>
+					<% } %>
+				</li>
+			</ul>
+
+		</div>
+
+		<div class="article-content">
+			<%- post.post %>
+		</div>
+		<%- include comment %>
+	</div>
+</section>

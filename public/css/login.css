@@ -1,0 +1,38 @@
+body {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+.login {
+  width: 350px;
+  height: 200px;
+  margin: 0 auto;
+  color: #fff;
+  line-height: 30px;
+  margin-top: 15%;
+}
+.login li {
+  margin-top: 20px;
+  font-size: 15px;
+  font-family: "microsoft yahei";
+}
+.login .name {
+  width: 100%;
+  height: 30px;
+}
+.login input {
+  border: 0;
+  width: 250px;
+  border-radius: 5px;
+  line-height: 30px;
+  padding: 0 5px;
+}
+.login span {
+  width: 90px;
+  display: inline-block;
+}
+.prompt {
+  color: #fff;
+  text-align: center;
+}
+/*# sourceMappingURL=login.css.map */

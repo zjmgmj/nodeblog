@@ -1,0 +1,27 @@
+
+<%- include header %>
+<!--<style type="text/css">
+	.archive{list-style:none;line-height:28px;}
+.archive h3{margin:0.5em 0;}
+.archive time{float:left;font-size:14px;color:#999999;margin-right:1.2em;}
+</style>-->
+<section class="main">
+	<div class="main-header-title">
+		<h1 class="row">存档</h1></div>
+	<div class="content row">
+		<ul>
+			<% var lastYear = 0 %>
+			<% posts.forEach(function (post, index) { %>
+			<% if (lastYear != post.time.year) { %>
+			<h2><%= post.time.year %></h2>
+			<% lastYear=post.time.year } %>
+			<li class="main-list">
+				<time><%= post.time.day %></time>
+				<a class="detail" href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">
+					<%= post.title %>
+				</a>
+			</li>
+			<% }) %>
+		</ul>
+	</div>
+</section>

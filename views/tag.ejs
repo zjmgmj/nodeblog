@@ -1,0 +1,21 @@
+<%- include header %>
+
+<section class="main">
+<!--	<% var lastYear = 0 %>-->
+	<div class="main-header-title">
+		<h1 class="row"><%= title %></h1></div>
+	<div class="content row">
+		<ul>
+			<% posts.forEach(function (post, index) { %>
+			<li class="main-list">
+				<time><%= post.time.day %></time>
+				<i class="sort"><span><%= post.pv %></span>浏览</i>
+				<a class="detail" href="/u/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">
+					<%= post.title %>
+				</a>
+			</li>
+			<% }) %>
+		</ul>
+	</div>
+
+</section>

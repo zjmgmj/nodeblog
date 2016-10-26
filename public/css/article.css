@@ -1,0 +1,29 @@
+.edit,
+.delete {
+  width: 100px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  display: inline-block;
+  margin: 0 10px;
+}
+.edit:hover,
+.delete:hover {
+  background: rgba(0, 0, 0, 0.5);
+  transition: all 600ms;
+}
+.detail {
+  text-align: center;
+  line-height: 50px;
+}
+.detail span {
+  padding: 0 10px;
+}
+.article-content {
+  margin-top: 50px;
+  min-height: 400px;
+  line-height: 25px;
+}
+/*# sourceMappingURL=article.css.map */

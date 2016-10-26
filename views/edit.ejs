@@ -1,0 +1,51 @@
+<%- include header %>
+<link rel="stylesheet" type="text/css" href="/css/comment.css" />
+<script>
+	var editor;
+	KindEditor.ready(function(K) {
+		editor = K.create('textarea[name="post"]', {
+			allowFileManager: true
+		});
+		K('input[name=getHtml]').click(function(e) {
+			alert(editor.html());
+		});
+		K('input[name=isEmpty]').click(function(e) {
+			alert(editor.isEmpty());
+		});
+		K('input[name=getText]').click(function(e) {
+			alert(editor.text());
+		});
+		K('input[name=selectedHtml]').click(function(e) {
+			alert(editor.selectedHtml());
+		});
+		K('input[name=setHtml]').click(function(e) {
+			editor.html('<h3>Hello KindEditor</h3>');
+		});
+		K('input[name=setText]').click(function(e) {
+			editor.text('<h3>Hello KindEditor</h3>');
+		});
+		K('input[name=insertHtml]').click(function(e) {
+			editor.insertHtml('<strong>插入HTML</strong>');
+		});
+		K('input[name=appendHtml]').click(function(e) {
+			editor.appendHtml('<strong>添加HTML</strong>');
+		});
+		K('input[name=clear]').click(function(e) {
+			editor.html('');
+		});
+	});
+</script>
+<section class="main">
+	<div class="content row margin-top-100">
+		<ul class="mesg">
+			<form method="post" action="/edit/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">
+				<li>
+					标题：<span><textarea name="title" rows="10" cols="100"><%= post.title %></textarea></span><br /> 正文：
+					<br />
+					<textarea name="post" rows="40" style="width: 100%;"><%= post.post %></textarea><br />
+					<input type="submit" value="保存修改" />
+				</li>
+			</form>
+		</ul>
+	</div>
+</section>
