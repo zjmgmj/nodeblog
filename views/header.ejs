@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 	<head>
 		<title>
 			<%= title %>
@@ -18,12 +17,14 @@
 		<link rel="stylesheet" href="/kindeditor/themes/default/default.css" />
 		<script charset="utf-8" src="/kindeditor/kindeditor-min.js"></script>
 		<script charset="utf-8" src="/kindeditor/lang/zh_CN.js"></script>
-<!-- JiaThis Button BEGIN -->
-<script type="text/javascript">
-var jiathis_config = {data_track_clickback:'true'};
-</script>
-<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0&amp;uid=2116126" charset="utf-8"></script>
-<!-- JiaThis Button END -->
+		<!-- JiaThis Button BEGIN -->
+		<script type="text/javascript">
+			var jiathis_config = {
+				data_track_clickback: 'true'
+			};
+		</script>
+		<script type="text/javascript" src="http://v3.jiathis.com/code/jiathis_r.js?move=0&amp;uid=2116126" charset="utf-8"></script>
+		<!-- JiaThis Button END -->
 	</head>
 
 	<body>
@@ -40,7 +41,9 @@ var jiathis_config = {data_track_clickback:'true'};
 						<a title="标签" href="/tags/mobile">Mobile</a>
 						<a href="/admin/post" target="_blank">发布</a>
 						<a href="/admin/logout">退出</a>
-						<a href="/tags/<%= user.name %>"><span>用户：</span><%= user.name %></a>
+						<a href="/tags/<%= user.name %>"><span>用户：</span>
+							<%= user.name %>
+						</a>
 					</li>
 					<li class="col-lg-3 search">
 						<form action="/search" method="GET">
@@ -50,4 +53,3 @@ var jiathis_config = {data_track_clickback:'true'};
 				</ul>
 			</nav>
 		</header>
-		
