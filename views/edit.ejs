@@ -40,12 +40,28 @@
 		<ul class="mesg">
 			<form method="post" action="/edit/<%= post.name %>/<%= post.time.day %>/<%= post.title %>">
 				<li>
-					标题：<span><textarea name="title" rows="10" cols="100"><%= post.title %></textarea></span><br /> 正文：
+					标题：<span><textarea name="title" rows="10" cols="100"><%= post.title %></textarea></span>
+					<br /> 分类：
+					<select name="tag1" value="javascript">
+						<option value="javascript">javascript</option>
+						<option value="HTML">HTML</option>
+						<option value="CSS">CSS</option>
+						<option value="Node">Node</option>
+						<option value="Mongodb">Mongodb</option>
+						<option value="mobile">Mobile</option>
+						<option value="Php">Php</option>
+					</select>
+					<select name="tag2" value="<%= user.name %>">
+						<option value="<%= user.name %>">
+							<%= user.name %>
+						</option>
+					</select> 正文：
 					<br />
 					<textarea name="post" rows="40" style="width: 100%;"><%= post.post %></textarea><br />
 					<input type="submit" value="保存修改" />
 				</li>
 			</form>
+
 		</ul>
 	</div>
 </section>

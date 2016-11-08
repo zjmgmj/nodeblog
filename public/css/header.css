@@ -10,7 +10,7 @@
   font-size: 15px;
   color: rgba(255, 255, 255, 0.9);
   transition: all 500ms;
-  padding: 16px 20px;
+  padding: 16px 16px;
 }
 .header .nav-bar a:hover {
   transition: all 500ms;
